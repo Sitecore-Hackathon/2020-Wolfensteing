@@ -14,9 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		..\2019-Wolfenstein\gulp-config.js = ..\2019-Wolfenstein\gulp-config.js
-		..\2019-Wolfenstein\gulpfile.js = ..\2019-Wolfenstein\gulpfile.js
+		gulp-config.js = gulp-config.js
+		gulpfile.js = gulpfile.js
 		nuget.config = nuget.config
+		package.json = package.json
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -33,7 +34,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{D27C83
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackatonWeb.WebSite", "src\Project\HackatonWeb.WebSite\HackatonWeb.WebSite.csproj", "{52388735-AE87-4031-8B1F-4E8E3BD535E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackatonWeb.Feature", "src\Feature\HackatonWeb.Feature\HackatonWeb.Feature.csproj", "{DDD90A1B-F96D-43FD-B89D-6FCF71BA062B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackatonWeb.Feature.Hero", "src\Feature\HackatonWeb.Feature.Hero\HackatonWeb.Feature.Hero.csproj", "{DDD90A1B-F96D-43FD-B89D-6FCF71BA062B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
