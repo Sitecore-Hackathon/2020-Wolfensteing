@@ -2571,12 +2571,22 @@ twitter-widget.hidden-tweet{
   background-color: #777; 
 }
 
+.suscribe .message.success{
+  padding: 15px 0;
+  color: #5cb85c;
+}
+
+.suscribe .message.error{
+  padding: 15px 0;
+  color: #d23d32;
+}
+
 #map { height: 600px; }
 
 .teams {
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow: auto;
   max-height: 60vh;
 }
 
@@ -2585,6 +2595,8 @@ twitter-widget.hidden-tweet{
   border: solid 1px #777;
   margin: 10px;
   display: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .team.active {
   display: block;
@@ -2594,6 +2606,8 @@ twitter-widget.hidden-tweet{
   background-color: #d23d32;
   text-align: center;
   color: #fff;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
 }
 
 .team .team-country {
