@@ -2643,7 +2643,9 @@ twitter-widget.hidden-tweet{
 }
 
 .team .team-country {
-  color: #777;
+  background-color: #777;
+  text-align: center;
+  color: #fff;
   font-weight: 600px;
   padding: 0 5px;
 }
@@ -2743,4 +2745,14 @@ a.nav-link.active {
     max-width: 100%;
     margin: 20px auto;
   }
+}
+
+.marker {
+  background-image: url('mapbox-icon.png');
+  background-color: red;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
 }
