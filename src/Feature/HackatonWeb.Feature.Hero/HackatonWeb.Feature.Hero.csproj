@@ -128,6 +128,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\HackatonWeb.Foundation.Util\HackatonWeb.Foundation.Util.csproj">
+      <Project>{19a26c4e-b496-448d-a657-cf9fea715401}</Project>
+      <Name>HackatonWeb.Foundation.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
