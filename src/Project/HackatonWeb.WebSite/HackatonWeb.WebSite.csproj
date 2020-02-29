@@ -115,9 +115,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\card1.jpg" />
+    <Content Include="assets\images\Sitecore-Hackathon-logo-small-own-it.png" />
+    <Content Include="assets\scripts\scripts.js" />
+    <Content Include="assets\styles\styles.css" />
+    <Content Include="assets\videos\hero.mp4" />
     <Content Include="Views\web.config" />
+    <Content Include="assets\.DS_Store" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Content\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
