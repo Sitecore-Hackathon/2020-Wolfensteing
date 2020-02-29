@@ -2533,16 +2533,21 @@ twitter-widget.hidden-tweet{
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 15px 0;
+  padding: 15px 0 50px;
 }
 
 .suscribe h3 {
   padding-bottom: 21px;
 }
 
+.suscribe form {
+  padding:  0 15px;
+}
+
 .suscribe input[type=text] {
   padding: 10px;
   width: 200px;
+  max-width: calc(100% - 80px);
   border: none;
 }
 
