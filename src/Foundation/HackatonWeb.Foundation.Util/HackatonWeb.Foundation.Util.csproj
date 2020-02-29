@@ -32,28 +32,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sitecore.Analytics">
-      <HintPath>..\lib\Sitecore\Sitecore.Analytics.dll</HintPath>
+      <HintPath>..\..\..\lib\Sitecore\Sitecore.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\lib\Sitecore\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\..\..\lib\Sitecore\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Marketing">
-      <HintPath>..\lib\Sitecore\Sitecore.Marketing.dll</HintPath>
+      <HintPath>..\..\..\lib\Sitecore\Sitecore.Marketing.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
-      <HintPath>..\lib\Sitecore\Sitecore.Mvc.dll</HintPath>
+      <HintPath>..\..\..\lib\Sitecore\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc.Analytics">
-      <HintPath>..\lib\Sitecore\Sitecore.Mvc.Analytics.dll</HintPath>
+      <HintPath>..\..\..\lib\Sitecore\Sitecore.Mvc.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Nexus">
-      <HintPath>..\lib\Sitecore\Sitecore.Nexus.dll</HintPath>
+      <HintPath>..\..\..\lib\Sitecore\Sitecore.Nexus.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Owin">
-      <HintPath>..\lib\Sitecore\Sitecore.Owin.dll</HintPath>
+      <HintPath>..\..\..\lib\Sitecore\Sitecore.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Web">
-      <HintPath>..\lib\Sitecore\Sitecore.Web.dll</HintPath>
+      <HintPath>..\..\..\lib\Sitecore\Sitecore.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
