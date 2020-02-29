@@ -1,5 +1,6 @@
 ﻿
 using HackatonWeb.Feature.Map.Models;
+using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Web.UI.WebControls;
 using System.Collections.Generic;
@@ -11,11 +12,12 @@ namespace HackatonWeb.Feature.Map
     {
         public static List<Team> GetTeams(Item item)
         {
-            var teamItems = item.Axes.GetDescendants();
+            var teamChildren = item.Children;
             var teams = new List<Team>();
 
-            foreach (var teamItem in teamItems)
+            foreach (var teamChild in teamChildren.InnerChildren)
             {
+                var teamItem = Sitecore.Context.Database.GetItem(teamChild.ID);
                 teams.Add(new Team
                 {
                     Country = GetCountry(teamItem),
@@ -47,10 +49,22 @@ namespace HackatonWeb.Feature.Map
 
         public static Country GetCountry(Item item)
         {
-            var countryItem = Sitecore.Context.Database.GetItem(item.Fields["Country"].ID);
+            ReferenceField field = item.Fields["Country"];
+            if (field == null)
+            {
+                return new Country();
+            }
+
+            var countryItem = Sitecore.Context.Database.GetItem($"/sitecore/{field.InnerField.Source}/{field.Path}");
+            // var countryItem = Sitecore.Context.Database.GetItem(field.TargetItem.ID); // Target Item is null ???
+            if (countryItem == null)
+            {
+                return new Country();
+            }
+
             var country = new Country
             {
-                CountryKey = countryItem.Fields["CountryKey"].Value,
+                CountryCode = countryItem.Fields["CountryCode"].Value,
                 CountryName = countryItem.Fields["CountryName"].Value,
                 CountryLatitude = double.Parse(countryItem.Fields["CountryLatitude"].Value),
                 CountryLongitude = double.Parse(countryItem.Fields["CountryLongitude"].Value),

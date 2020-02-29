@@ -4,7 +4,7 @@ namespace HackatonWeb.Feature.Map.Models
 {
     public class Country
     {
-        public string CountryKey { get; set; }
+        public string CountryCode { get; set; }
 
         public string CountryName { get; set; }
 
