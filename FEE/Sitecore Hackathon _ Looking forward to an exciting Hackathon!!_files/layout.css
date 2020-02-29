@@ -1,0 +1,67 @@
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+  position: relative; }
+
+.row:before,
+.row:after {
+  display: table;
+  line-height: 0;
+  content: ""; }
+
+.row:after {
+  clear: both; }
+
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px; }
+
+.container {
+  width: 100%; 
+  max-width: 940px;
+}
+
+.span12 {
+  width: calc(100/12*12); }
+
+.span11 {
+  width: calc(100/12*11); }
+
+.span10 {
+  width: calc(100/12*10); }
+
+.span9 {
+  width: calc(100/12*9); }
+
+.span8 {
+  width: calc(100/12*8); }
+
+.span7 {
+  width: calc(100/12*7); }
+
+.span6 {
+  width: calc(100/12*6); }
+
+.span5 {
+  width: calc(100/12*5); }
+
+.span4 {
+  width: calc(100/12*4); }
+
+.span3 {
+  width: calc(100/12*3); }
+
+.span2 {
+  width: calc(100/12*2); }
+
+.span1 {
+  width: calc(100/12*1); }
+
+.container:before,
+.container:after {
+  content: "";
+  display: table; }
+
+.container:after {
+  clear: both; }
