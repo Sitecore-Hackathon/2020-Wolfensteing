@@ -4,7 +4,7 @@ namespace HackatonWeb.Feature.Event.Models
 {
     public class EventItem
     {    
-        public HtmlString EventImage { get; set; }
+        public string EventImage { get; set; }
 
         public HtmlString EventLink { get; set; }
 

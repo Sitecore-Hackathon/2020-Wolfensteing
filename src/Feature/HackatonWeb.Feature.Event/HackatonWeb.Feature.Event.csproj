@@ -129,7 +129,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\HackatonWeb.Foundation.Util\HackatonWeb.Foundation.Util.csproj">
+    <ProjectReference Include="..\..\Foundation\HackatonWeb.Foundation.Util\HackatonWeb.Foundation.Util.csproj">
       <Project>{19a26c4e-b496-448d-a657-cf9fea715401}</Project>
       <Name>HackatonWeb.Foundation.Util</Name>
     </ProjectReference>
