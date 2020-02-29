@@ -2354,7 +2354,6 @@ div.rtw_rt_meta {
   background-size: cover;
   z-index: 0;
   overflow: hidden;
-  margin-bottom: 15px;
 }
 .overlay {
   position: absolute;
@@ -2433,7 +2432,7 @@ div.rtw_rt_meta {
 }
 
 .older-events {
-  padding: 20px 0;
+  padding: 0 0 20px;
 }
 
 .item-card {
@@ -2446,6 +2445,7 @@ div.rtw_rt_meta {
   width: 40%;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 150px;
 }
 .item-card .content {
   width: 60%;
