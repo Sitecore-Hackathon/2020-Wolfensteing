@@ -2465,6 +2465,11 @@ div.rtw_rt_meta {
   margin: 10px 0;
 }
 
+
+.rtf {
+  margin-top: 30px;
+  color: ;
+}
 twitter-widget {
   opacity: 1;
   transition: opacity .15s ease-in-out;
