@@ -9,6 +9,11 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 
 </head>
@@ -190,7 +195,10 @@
 
         
     </section>
-
+    <div id='map'>
+        <div class="country-marker" data-cordinates="[-77.038659, 38.931567]" data-name="usa" data-text="<strong>USA</strong><p>1 team suscribed</p>"></div>
+        <div class="country-marker" data-cordinates="[-78.639183, -1.684712]" data-name="ecuador" data-text="<strong>Ecuador</strong><p>3 teams suscribed</p>"></div>
+    </div>
     <section id="pre-footer">
         <div class="container">
 
@@ -220,6 +228,70 @@
             </div>
         </div>
     </section>
+
+    <div class="modal" id="MyModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Teams <span id="modal-country"></span></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="teams">
+                  <div class="team" data-country="ecuador">
+                      <div class="team-title">
+                          Team 1
+                      </div>
+                      <div class="team-body">
+                        <div class="team-country">Ecuador</div>
+                        <div class="team-mate">Ramiro Batallas</div>
+                        <div class="team-mate">Marcelo Bonilla</div>
+                        <div class="team-mate">Jorge Cardenas</div>
+                    </div>
+                  </div>
+                  <div class="team" data-country="ecuador">
+                    <div class="team-title">
+                        Team 1
+                    </div>
+                    <div class="team-body">
+                        <div class="team-country">Ecuador</div>
+                        <div class="team-mate">Ramiro Batallas</div>
+                        <div class="team-mate">Marcelo Bonilla</div>
+                        <div class="team-mate">Jorge Cardenas</div>
+                    </div>
+                </div>
+                <div class="team" data-country="ecuador">
+                    <div class="team-title">
+                        Team 1
+                    </div>
+                    <div class="team-body">
+                        <div class="team-country">Ecuador</div>
+                        <div class="team-mate">Ramiro Batallas</div>
+                        <div class="team-mate">Marcelo Bonilla</div>
+                        <div class="team-mate">Jorge Cardenas</div>
+                    </div>
+                </div>
+                <div class="team" data-country="usa">
+                    <div class="team-title">
+                        Team 1
+                    </div>
+                    <div class="team-body">
+                        <div class="team-country">Ecuador</div>
+                        <div class="team-mate">Ramiro Batallas</div>
+                        <div class="team-mate">Marcelo Bonilla</div>
+                        <div class="team-mate">Jorge Cardenas</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <script src="./assets/scripts/tweetjs.js"></script>
     <script src="http://platform.twitter.com/widgets.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>

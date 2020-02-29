@@ -140,3 +140,166 @@ var x = setInterval(function() {
     
 
 
+mapboxgl.accessToken = 'pk.eyJ1IjoibWJvbmlsbGEiLCJhIjoiY2s3N3JhNzZoMGF2ZDNrb2R1aW00dHhlayJ9.xohHAIYuNj-rHsGRGgjWsw';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-77.04, 38.907],
+zoom: 1
+});
+ 
+map.on('load', function() {
+
+var geoJson = {
+  'type': 'geojson',
+  'data': {
+    'type': 'FeatureCollection',
+    'features': [
+      
+    ]
+  }
+}
+
+$('.country-marker').each(function(index, element) {
+  var feature = {
+    'type': 'Feature',
+    'properties': {
+      'description': $(element).data('text'),
+      'icon': 'marker',
+      'country': $(element).data('name'),
+    },
+    'geometry': {
+      'type': 'Point',
+      'coordinates': $(element).data('cordinates')
+    }
+  }
+
+  geoJson.data.features.push(feature);
+  
+})
+
+map.addSource('places', geoJson);
+ 
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+'icon-image': '{icon}-15',
+'icon-allow-overlap': true
+}
+});
+ 
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+  // Change the cursor style as a UI indicator.
+  map.getCanvas().style.cursor = 'pointer';
+  
+  var coordinates = e.features[0].geometry.coordinates.slice();
+  var description = e.features[0].properties.description;
+  
+  // Ensure that if the map is zoomed out such that multiple
+  // copies of the feature are visible, the popup appears
+  // over the copy being pointed to.
+  while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+  coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+  }
+  
+  // Populate the popup and set its coordinates
+  // based on the feature found.
+  popup
+  .setLngLat(coordinates)
+  .setHTML(description)
+  .addTo(map);
+});
+
+map.on('click', 'places', function(e) {
+  var country = e.features[0].properties.country;
+  $('#modal-country').html(country.toUpperCase());
+  $('.team').removeClass('active');
+  $('*[data-country='+country+']').addClass('active');
+  $('#MyModal').modal();
+});
+ 
+map.on('mouseleave', 'places', function() {
+  map.getCanvas().style.cursor = '';
+  popup.remove();
+});
+
+
+});
+
+(function() {
+  "use strict";
+  
+  /**
+   * Bootstrap Modal Pure Js Class
+   * 2015 (c) Daniel Vinciguerra 
+   */
+  var Modal = function(el, options) {
+      var self = this;
+      
+      this.el = document.querySelector(el);
+      this.options = options;
+      
+      try {
+          var list = document.querySelectorAll('#'+this.el.id+' [data-dismiss="modal"]');
+          for (var x = 0; x < list.length; x++){
+              list[x].addEventListener('click', function(e){ 
+                  if(e) e.preventDefault();
+                  self.hide();
+              });
+          }
+      }
+      catch(e){
+          console.log(e);
+      }
+  };
+
+  /**
+   * Methods
+   */
+  Modal.prototype.show = function() {
+      var self = this;
+      // adding backdrop (transparent background) behind the modal
+      if (self.options.backdrop) {
+          var backdrop = document.getElementById('bs.backdrop');
+          if (backdrop === null) {
+              backdrop = document.createElement('div');
+              backdrop.id = "bs.backdrop";
+              backdrop.className = "modal-backdrop fade in";
+              document.body.appendChild(backdrop);
+          }
+      }
+
+      // show modal
+      this.el.classList.add('in');
+      this.el.style.display = 'block';
+      document.body.style.paddingRight = '13px';
+      document.body.classList.add('modal-open');
+  };
+
+  Modal.prototype.hide = function() {
+      var self = this;
+      // hide modal
+      this.el.classList.remove('in');
+      this.el.style.display = 'none';
+      document.body.style = '';
+      document.body.classList.remove('modal-open');
+
+      // removing backdrop
+      if (self.options.backdrop) {
+          var backdrop = document.getElementById('bs.backdrop');
+          if (backdrop !== null) document.body.removeChild(backdrop);
+      }
+  };
+
+ 
+ 
+})();

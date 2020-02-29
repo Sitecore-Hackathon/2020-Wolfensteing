@@ -2571,6 +2571,41 @@ twitter-widget.hidden-tweet{
   background-color: #777; 
 }
 
+#map { height: 600px; }
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  max-height: 60vh;
+}
+
+.team {
+  width: calc(50% - 20px);
+  border: solid 1px #777;
+  margin: 10px;
+  display: none;
+}
+.team.active {
+  display: block;
+}
+
+.team .team-title {
+  background-color: #d23d32;
+  text-align: center;
+  color: #fff;
+}
+
+.team .team-country {
+  color: #777;
+  font-weight: 600px;
+  padding: 0 5px;
+}
+
+.team .team-mate {
+  padding: 0 5px;
+}
+
 @media only screen and (max-width: 769px) {
   #primary-nav {
   position: relative;
@@ -2592,6 +2627,15 @@ twitter-widget.hidden-tweet{
     display: block;
     min-height: 380px;
   }
+  .teams {
+    overflow: scroll;
+    max-height: 70vh;
+  }
+  
 }
 
-#map { height: 600px; }
+@media only screen and (max-width: 500px) {
+  .team {
+    width: 100%;
+  }
+}
