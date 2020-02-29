@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5B3C1654-58B3-465C-95EF-2CFEB77EC351}</ProjectGuid>
+    <ProjectGuid>{CC39C05C-84E5-4276-96FC-6DB3EAAEAAA9}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HackatonWeb.Feature.Event</RootNamespace>
-    <AssemblyName>HackatonWeb.Feature.Event</AssemblyName>
+    <RootNamespace>HackatonWeb.Feature.MailingList</RootNamespace>
+    <AssemblyName>HackatonWeb.Feature.MailingList</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -112,8 +112,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\EventItemController.cs" />
-    <Compile Include="Models\EventItem.cs" />
+    <Compile Include="Controllers\MailingListController.cs" />
+    <Compile Include="Models\MailingList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -124,7 +124,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Views\EventItem.cshtml">
+    <None Include="Views\MailingList.cshtml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </None>
   </ItemGroup>
