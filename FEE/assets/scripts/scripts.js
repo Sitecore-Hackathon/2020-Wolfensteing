@@ -250,7 +250,7 @@ $( document ).ready(function() {
     var url = $('.suscribe form').attr('action')+email;
     if(pattern.test(email)){
       $.get(url, function(data, status){
-        if(data.Seccess){
+        if(data.Success){
           $('.suscribe .message').addClass('success').html(data.Message);
         }else{
           $('.suscribe .message').addClass('error').html(data.Message);
