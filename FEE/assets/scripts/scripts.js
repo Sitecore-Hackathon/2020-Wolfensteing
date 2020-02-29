@@ -147,7 +147,7 @@ $( document ).ready(function() {
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [-77.04, 38.907],
-    zoom: 1.5
+    zoom: 1.3
     });
     
     map.on('load', function() {

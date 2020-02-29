@@ -2458,6 +2458,10 @@ div.rtw_rt_meta {
   font-size: 22px;
 }
 
+.item-card .content .rtf{
+  margin-top: 0;
+}
+
 .item-card .content .card-date{
   border-top: 1px solid #777;
   border-bottom: 1px solid #777;
@@ -2468,8 +2472,12 @@ div.rtw_rt_meta {
 
 .rtf {
   margin-top: 30px;
-  color: ;
 }
+
+.rtf a{
+  color: #d23d32;
+}
+
 twitter-widget {
   opacity: 1;
   transition: opacity .15s ease-in-out;
@@ -2581,7 +2589,31 @@ twitter-widget.hidden-tweet{
   color: #d23d32;
 }
 
-#map { height: 600px; }
+#map { 
+  height: 600px; 
+  margin: 20px 0;
+}
+
+#accordion {
+  margin: 20px 0;
+}
+
+#accordion .card-header {
+  padding: 0;
+}
+
+#accordion .btn-link {
+  width: 100%;
+  text-align: left;
+  color: #000;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+#accordion .card-body {
+  padding: 10px 15px;
+  color: #777;
+}
 
 .teams {
   display: flex;
@@ -2631,6 +2663,48 @@ twitter-widget.hidden-tweet{
   display: inline-block;
 }
 
+.judges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+.judge {
+  max-width: 20%;
+  margin: 10px;
+}
+
+.judge .name {
+  position: relative;
+}
+
+.judge .social {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.judge .social a {
+  display: inline-block;
+}
+
+
+a.nav-link {
+  color: #777;
+  font-weight: 600;
+}
+
+a.nav-link:hover {
+  color: #000;
+}
+
+a.nav-link.active {
+  color: #d23d32 !important;
+}
+
+.tabs {
+  margin: 20px 0;
+}
+
 @media only screen and (max-width: 769px) {
   #primary-nav {
   position: relative;
@@ -2656,11 +2730,17 @@ twitter-widget.hidden-tweet{
     overflow: scroll;
     max-height: 70vh;
   }
-  
+  .judge {
+    max-width: calc(50% - 20px);
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .team {
     width: 100%;
+  }
+  .judge {
+    max-width: 100%;
+    margin: 20px auto;
   }
 }
