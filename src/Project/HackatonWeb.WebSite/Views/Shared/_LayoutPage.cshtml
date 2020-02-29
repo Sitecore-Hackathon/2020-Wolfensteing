@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML>
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitecore Hackathon | Looking forward to an exciting Hackathon!!</title>
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    @Html.Sitecore().VisitorIdentification()
+</head>
+
+<body>
+    @Html.Sitecore().Placeholder("header")
+
+    @Html.Sitecore().Placeholder("content")
+
+    @Html.Sitecore().Placeholder("footer")
+
+    <script src="~/assets/scripts/scripts.js"></script>
+</body>
+
+</html>

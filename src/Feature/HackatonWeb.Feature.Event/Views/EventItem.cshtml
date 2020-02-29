@@ -1,0 +1,16 @@
+﻿@model HackatonWeb.Feature.Event.Models.EventItem
+
+<div class="col-md-6">
+    <div class="item-card">
+        <div class="item-card-image">
+            @Model.EventImage            
+        </div>
+        <div class="content">
+            @Model.EventLink            
+            <div class="card-date">
+                @Model.EventDate
+            </div>
+            <p>@Model.Description</p>
+        </div>
+    </div>
+</div>
