@@ -49,20 +49,92 @@ if ( !isMobile.any() ) {
 }
 
 
-// Simple 'canplay' detection (not mobile friendly)
 
-// Use js to fade in video when it's ready to play
-// $(function() {
-  
-//   // Fade in video from css when it's ready to play
-//   var video = document.getElementById("video");
-  
-//   // Listen for canplay event and fade video in
-//   video.addEventListener('canplay', function () {
-//     // console.log('video duration information available'); 
-//     $('#video').animate({
-//       opacity: 1
-//     }, 50);
-//   });
-  
-// });
+
+
+
+//Tweets
+
+var Query = '#SCHackathon';
+var tweets = null;
+var activeTweet = 0;
+TweetJs.Search(Query, function(data, index) {
+  data.statuses.forEach(function(item, index){
+    twttr.widgets.createTweet(
+      item.id_str,
+      document.getElementById('tweets'),
+      {
+        conversation : 'none',
+        cards: 'hidden',
+      }
+    ).then(function (el) {
+      var twitterWidget= el.shadowRoot;
+      el.classList.add('hidden-tweet');
+      twitterWidget.querySelector('.EmbeddedTweet').style.color = "#aaa";
+      twitterWidget.querySelector('.EmbeddedTweet').style.backgroundColor = "transparent";
+      twitterWidget.querySelector('.EmbeddedTweet').style.fontSize = "12px";
+      twitterWidget.querySelector('.EmbeddedTweet').style.borderColor = "transparent";
+      twitterWidget.querySelector('.EmbeddedTweet .CallToAction').style.borderColor = "transparent";
+      twitterWidget.querySelector('.EmbeddedTweet .CallToAction').style.fontSize = "12px";
+      twitterWidget.querySelector('.EmbeddedTweet .CallToAction').style.paddingTop = "0";
+      twitterWidget.querySelector('.EmbeddedTweet .EmbeddedTweet-tweet').style.paddingBottom = "0";
+      twitterWidget.querySelector('.EmbeddedTweet .TweetInfo').style.fontSize = "12px";
+      if(twitterWidget.querySelector('.QuoteTweet')){
+        twitterWidget.querySelector('.QuoteTweet').style.display = "none";
+      }
+      if(index === data.statuses.length -1){
+        console.log('s');
+        console.log(document.querySelectorAll('twitter-widget'));
+        document.querySelectorAll('twitter-widget')[activeTweet].classList.remove("hidden-tweet");
+        passTweet();
+      }
+    });
+
+  });
+});
+function passTweet(){
+  setTimeout(function(){ 
+    document.querySelectorAll('twitter-widget')[activeTweet].classList.add("hidden-tweet");
+    if(activeTweet === document.querySelectorAll('twitter-widget').length-1 ){
+      activeTweet = 0;
+    }else{
+      activeTweet ++;
+    }
+    document.querySelectorAll('twitter-widget')[activeTweet].classList.remove("hidden-tweet");
+    passTweet();
+  }, 6000);
+}
+
+    // Set the date we're counting down to
+var countDownDate = new Date("03/27/2020 08:00 GMT+05:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    
+    
+
+
+    

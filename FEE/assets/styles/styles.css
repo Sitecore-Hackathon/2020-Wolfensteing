@@ -269,7 +269,10 @@ header {
   bottom: -28px;
   right: 0;
   font-size: 13px;
-  line-height: 1em; }
+  line-height: 1em; 
+  
+}
+
   #primary-nav ul {
     list-style: none;
     margin: 0;
@@ -280,7 +283,8 @@ header {
     float: right;
     margin: 0 -15px 0 0;
     padding: 0;
-    list-style: none; }
+    list-style: none; 
+  }
     #primary-nav #primary-nav-list > li {
       float: left;
       position: relative;
@@ -2379,7 +2383,7 @@ div.rtw_rt_meta {
 }
 .hero .overlay .hero-text .hero-buttons a{
   clear: both;
-  background-color: #bf3417;
+  background-color: #d23d32;
   border: 0 none;
   border-radius: 4px;
   color: #FFFFFF;
@@ -2413,6 +2417,12 @@ div.rtw_rt_meta {
   opacity: 0;
   display: none;
 }
+
+.hero .timer-container {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 30px;
+}
 @media only screen and (min-width: 769px) {
   .hero {
     background-image: unset;
@@ -2430,6 +2440,7 @@ div.rtw_rt_meta {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-top: 20px;
 }
 .item-card .item-card-image {
   width: 40%;
@@ -2451,4 +2462,32 @@ div.rtw_rt_meta {
   border-bottom: 1px solid #777;
   font-size: 14px;
   margin: 10px 0;
+}
+
+twitter-widget {
+  opacity: 1;
+  transition: opacity .15s ease-in-out;
+  display: block;
+}
+
+twitter-widget.hidden-tweet{
+  opacity: 0;
+  display: none !important;
+}
+
+@media only screen and (max-width: 769px) {
+  #primary-nav {
+  position: relative;
+  }
+  #primary-nav #primary-nav-list {
+    clear: both;
+      float: left;
+  }
+  .item-card .item-card-image {
+    width: 100%;
+  }
+  .item-card .content {
+    width: 100%;
+    padding-left: 0;
+  }
 }
