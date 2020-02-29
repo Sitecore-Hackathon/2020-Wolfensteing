@@ -26,8 +26,9 @@ namespace HackatonWeb.Feature.Hero.Controllers
                 Description = new HtmlString(FieldRenderer.Render(item, "Description")),
                 LinkMoreInformation = new HtmlString(FieldRenderer.Render(item, "LinkMoreInformation")),
                 LinkJoin = new HtmlString(FieldRenderer.Render(item, "LinkJoin")),
-                BackgroundImage = new HtmlString(FieldRenderer.Render(item, "BackgroundImage")),
-                VideoUrl = LinkUtil.GetUrlFromLinkField(item.Fields["VideoUrl"])
+                BackgroundImage = LinkUtil.GetUrlFromLinkField(item.Fields["BackgroundImage"]),
+                VideoUrl = LinkUtil.GetUrlFromLinkField(item.Fields["VideoUrl"]),
+                MainEventDate = new HtmlString(FieldRenderer.Render(item,"MainEventDate"))
             };
 
             return heroContent;

@@ -1,5 +1,4 @@
-﻿
-using System.Web;
+﻿using System.Web;
 
 namespace HackatonWeb.Feature.Hero.Models
 {
@@ -15,8 +14,10 @@ namespace HackatonWeb.Feature.Hero.Models
 
         public HtmlString LinkJoin { get; set; }
 
-        public HtmlString BackgroundImage { get; set; }
+        public string BackgroundImage { get; set; }
 
         public string VideoUrl { get; set; }
+
+        public HtmlString MainEventDate { get; set; }
     }
 }

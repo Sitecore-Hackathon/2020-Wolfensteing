@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{52388735-AE87-4031-8B1F-4E8E3BD535E4}</ProjectGuid>
+    <ProjectGuid>{5B3C1654-58B3-465C-95EF-2CFEB77EC351}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HackatonWeb.WebSite</RootNamespace>
-    <AssemblyName>HackatonWeb.WebSite</AssemblyName>
+    <RootNamespace>HackatonWeb.Feature.Event</RootNamespace>
+    <AssemblyName>HackatonWeb.Feature.Event</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -112,24 +112,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\EventItemController.cs" />
+    <Compile Include="Models\EventItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\images\Sitecore-Hackathon-logo-small-own-it.png" />
-    <Content Include="assets\scripts\scripts.js" />
-    <Content Include="assets\styles\styles.css" />
     <Content Include="Views\web.config" />
-    <Content Include="assets\.DS_Store" />
     <None Include="packages.config" />
-    <Content Include="Views\Shared\_LayoutPage.cshtml" />
-    <Content Include="Views\Shared\Header.cshtml" />
-    <Content Include="Views\Shared\Footer.cshtml" />
-    <Content Include="Views\Content\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\EventItem.cshtml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\HackatonWeb.Foundation.Util\HackatonWeb.Foundation.Util.csproj">
+      <Project>{19a26c4e-b496-448d-a657-cf9fea715401}</Project>
+      <Name>HackatonWeb.Foundation.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -144,9 +147,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>63457</DevelopmentServerPort>
+          <DevelopmentServerPort>63634</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63457/</IISUrl>
+          <IISUrl>http://localhost:63634/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

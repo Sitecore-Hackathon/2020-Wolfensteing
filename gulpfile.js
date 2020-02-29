@@ -15,8 +15,9 @@ gulp.task("Publish-Custom", function (callback) {
         "Publish-All-Configs",
         "Publish-All-Views",
         "Publish-All-Scripts",
+        "Publish-All-Images",
+        "Publish-All-Styles",
         "Publish-Assemblies",
-        "Publish-Dependencies",
         callback);
 });
 
@@ -84,9 +85,43 @@ gulp.task("Publish-All-Views", function () {
 
 gulp.task("Publish-All-Scripts", function () {
     var root = "./";
-    var roots = [root + "/**/Scripts"];
+    var roots = [root + "/**/assets/scripts"];
     var files = "/*.js";
-    var destination = config.websiteRoot + "\\Scripts";
+    var destination = config.websiteRoot + "\\assets/scripts";
+    return gulp.src(roots, { base: root }).pipe(
+        foreach(function (stream, file) {
+            console.log("Publishing from " + file.path);
+            gulp.src(file.path + files, { base: file.path })
+                .pipe(newer(destination))
+                .pipe(debug({ title: "Copying " }))
+                .pipe(gulp.dest(destination));
+            return stream;
+        })
+    );
+});
+
+gulp.task("Publish-All-Images", function () {
+    var root = "./";
+    var roots = [root + "/**/assets/images"];
+    var files = "/*.*";
+    var destination = config.websiteRoot + "\\assets/images";
+    return gulp.src(roots, { base: root }).pipe(
+        foreach(function (stream, file) {
+            console.log("Publishing from " + file.path);
+            gulp.src(file.path + files, { base: file.path })
+                .pipe(newer(destination))
+                .pipe(debug({ title: "Copying " }))
+                .pipe(gulp.dest(destination));
+            return stream;
+        })
+    );
+});
+
+gulp.task("Publish-All-Styles", function () {
+    var root = "./";
+    var roots = [root + "/**/assets/styles"];
+    var files = "/*.css";
+    var destination = config.websiteRoot + "\\assets/styles";
     return gulp.src(roots, { base: root }).pipe(
         foreach(function (stream, file) {
             console.log("Publishing from " + file.path);
