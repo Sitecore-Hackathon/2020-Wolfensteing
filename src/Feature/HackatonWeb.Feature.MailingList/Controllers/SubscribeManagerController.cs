@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Sitecore.Services.Infrastructure.Web.Http;
 using System.Text;
 using System.Web.Http;
 using System.Web.Http.Results;
@@ -8,18 +7,15 @@ namespace HackatonWeb.Feature.MailingList.Controllers
 {
     public class SubscribeManagerController : ApiController
     {
-        [HttpPost]
-        public IHttpActionResult Get(string id)
+        [HttpGet]
+        public IHttpActionResult Get(string email)
         {
-            var comment = new
+            var result = new
             {
-                Id = id,
-                Name = "Test Person",
-                Email = "mailme@testperson.dk",
-                Subject = "I have a comment",
-                CommentMessage = "This is my comment"
+                Message = $"You have been subscribe to this mailing list using the email: {email}",
+                Success = true
             };
-            return new JsonResult<dynamic>(comment, new JsonSerializerSettings(), Encoding.UTF8, this);
+            return new JsonResult<dynamic>(result, new JsonSerializerSettings(), Encoding.UTF8, this);
         }
     }
 }

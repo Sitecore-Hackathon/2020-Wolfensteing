@@ -8,11 +8,10 @@ namespace HackatonWeb.Feature.MailingList.Config
     {
         public virtual void Process(PipelineArgs args)
         {
-            RouteTable.Routes.MapHttpRoute("CommentApi", "sitecore/api/comments/{id}", new
-            {
-                controller = "SubscribeManager",
-                action = "Get"
-            });
+            RouteTable.Routes.MapHttpRoute("SubscribeApi", "api/v1/subscribe/{email}",
+                new { controller = "SubscribeManager", action = "Get" },
+                new { httpMethod = new HttpMethodConstraint("GET") }
+            );
         }
     }
 }
