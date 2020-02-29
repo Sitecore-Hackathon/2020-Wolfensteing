@@ -20,7 +20,9 @@ namespace HackatonWeb.Feature.Map.Controllers
 
             var team = new Team()
             {
-                HashTag = item.Fields["HashTag"].Value
+                TeamName = new HtmlString(FieldRenderer.Render(item, "TeamName")),
+                Country = Common.GetCountry(item),
+                TeamMates = Common.GetTeamMates(item)
             };
 
             return team;

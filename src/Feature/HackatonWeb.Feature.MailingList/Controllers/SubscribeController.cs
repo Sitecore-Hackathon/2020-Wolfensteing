@@ -1,4 +1,5 @@
 ﻿using HackatonWeb.Feature.MailingList.Models;
+using HackatonWeb.Foundation.Util;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 using System.Web;
@@ -24,7 +25,7 @@ namespace HackatonWeb.Feature.MailingList.Controllers
                 LabelInputArial = item.Fields["LabelInputArial"].Value,
                 LabelInputPlaceHolder = item.Fields["LabelInputPlaceHolder"].Value,
                 LabelButtonSubscribe = item.Fields["LabelButtonSubscribe"].Value,
-                SubmitUrl = item.Fields["SubmitUrl"].Value
+                SubmitUrl = LinkUtil.GetUrlFromLinkField(item.Fields["SubmitUrl"])
             };
 
             return mailingList;

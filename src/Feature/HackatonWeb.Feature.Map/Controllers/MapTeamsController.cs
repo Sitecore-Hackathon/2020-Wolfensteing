@@ -21,6 +21,8 @@ namespace HackatonWeb.Feature.Map.Controllers
             var mapTeams = new MapTeams()
             {
                 Title = new HtmlString(FieldRenderer.Render(item, "Title")),
+                Close = item.Fields["Close"].Value,
+                Teams = Common.GetTeams(item)
             };
 
             return mapTeams;

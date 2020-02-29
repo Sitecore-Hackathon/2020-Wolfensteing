@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.Web;
 
 namespace HackatonWeb.Feature.Map.Models
 {
@@ -7,5 +8,7 @@ namespace HackatonWeb.Feature.Map.Models
         public HtmlString Title { get; set; }
 
         public string Close { get; set; }
+
+        public List<Team> Teams { get; set; }
     }
 }

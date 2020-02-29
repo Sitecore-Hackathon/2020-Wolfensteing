@@ -112,8 +112,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Util\Common.cs" />
+    <Compile Include="Controllers\MateController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\MapTeamsController.cs" />
+    <Compile Include="Models\Mate.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\MapTeams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +125,9 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Mate.cshtml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
