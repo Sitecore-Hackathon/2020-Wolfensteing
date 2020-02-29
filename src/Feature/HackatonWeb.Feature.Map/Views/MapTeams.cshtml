@@ -7,7 +7,7 @@
             <div id='map'>
                 @foreach (var team in Model.Teams)
                 {
-                    <div class="country-marker" data-cordinates="[@team.Country.CountryLatitude, @team.Country.CountryLongitude]" data-name="@team.Country.CountryCode" data-text="@team.Country.CountryInfo"></div>
+                    <div class="country-marker" data-cordinates="[@team.Country.CountryLongitude, @team.Country.CountryLatitude]" data-name="@team.Country.CountryCode" data-text="@team.Country.CountryInfo"></div>
                 }
             </div>
         </div>

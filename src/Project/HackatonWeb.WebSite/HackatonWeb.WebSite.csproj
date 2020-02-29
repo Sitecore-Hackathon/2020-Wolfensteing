@@ -112,9 +112,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\HackathonController.cs" />
     <Compile Include="Controllers\HeaderContentController.cs" />
     <Compile Include="Models\HeaderContentModel.cs" />
     <Compile Include="Models\NavigationMenu.cs" />
+    <Compile Include="Models\Pages\HackathonModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +132,7 @@
     <Content Include="Views\Content\Home.cshtml" />
     <Content Include="Views\Content\HeaderContent.cshtml" />
     <Content Include="Views\Content\NavigationMenu.cshtml" />
+    <Content Include="Views\Content\Pages\Hackathon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
