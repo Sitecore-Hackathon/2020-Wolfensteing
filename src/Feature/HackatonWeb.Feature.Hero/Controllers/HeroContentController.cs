@@ -1,6 +1,5 @@
 ﻿using HackatonWeb.Feature.Hero.Models;
 using HackatonWeb.Foundation.Util;
-using Sitecore.Data.Fields;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 using System.Web;
@@ -12,7 +11,7 @@ namespace HackatonWeb.Feature.Hero.Controllers
     {
         public ActionResult Index()
         {
-            return View("~/Views/HeroContent.cshtml",CreateModel());
+            return View("~/Views/HeroContent.cshtml", CreateModel());
         }
 
         private HeroContent CreateModel()
@@ -34,6 +33,6 @@ namespace HackatonWeb.Feature.Hero.Controllers
             };
 
             return heroContent;
-        }  
+        }
     }
 }

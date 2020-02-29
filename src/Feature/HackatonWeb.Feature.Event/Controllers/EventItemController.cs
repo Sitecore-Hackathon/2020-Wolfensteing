@@ -1,5 +1,4 @@
 ﻿using HackatonWeb.Feature.Event.Models;
-using HackatonWeb.Foundation.Util;
 using Sitecore.Data.Fields;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Resources.Media;
