@@ -12,11 +12,12 @@ namespace HackatonWeb.Feature.Map
     {
         public static List<Team> GetTeams(Item item)
         {
-            var teamItems = item.Axes.GetDescendants();
+            var teamChildren = item.Children;
             var teams = new List<Team>();
 
-            foreach (var teamItem in teamItems)
+            foreach (var teamChild in teamChildren.InnerChildren)
             {
+                var teamItem = Sitecore.Context.Database.GetItem(teamChild.ID);
                 teams.Add(new Team
                 {
                     Country = GetCountry(teamItem),
@@ -55,6 +56,7 @@ namespace HackatonWeb.Feature.Map
             }
 
             var countryItem = Sitecore.Context.Database.GetItem($"/sitecore/{field.InnerField.Source}/{field.Path}");
+            // var countryItem = Sitecore.Context.Database.GetItem(field.TargetItem.ID); // Target Item is null ???
             if (countryItem == null)
             {
                 return new Country();
