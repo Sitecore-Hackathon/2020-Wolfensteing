@@ -55,7 +55,7 @@ if ( !isMobile.any() ) {
 
 //Tweets
 
-var Query = '#SCHackathon';
+var Query = document.getElementById('tweets').getAttribute('data-hashtag');
 var tweets = null;
 var activeTweet = 0;
 TweetJs.Search(Query, function(data, index) {
@@ -140,4 +140,3 @@ var x = setInterval(function() {
     
 
 
-    

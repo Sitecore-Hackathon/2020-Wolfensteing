@@ -2593,3 +2593,5 @@ twitter-widget.hidden-tweet{
     min-height: 380px;
   }
 }
+
+#map { height: 600px; }
