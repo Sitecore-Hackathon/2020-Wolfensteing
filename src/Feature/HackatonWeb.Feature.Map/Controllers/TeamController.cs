@@ -1,30 +1,29 @@
-﻿using HackatonWeb.Feature.Twitter.Models;
+﻿using HackatonWeb.Feature.Map.Models;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 using System.Web;
 using System.Web.Mvc;
 
-namespace HackatonWeb.Feature.Twitter.Controllers
+namespace HackatonWeb.Feature.Map.Controllers
 {
-    public class TwitterWidgetController : Controller
+    public class TeamController : Controller
     {
         public ActionResult Index()
         {
-            return View("~/Views/TwitterWidget.cshtml", CreateModel());
+            return View("~/Views/Team.cshtml", CreateModel());
         }
 
-        private TwitterWidget CreateModel()
+        private Team CreateModel()
         {
             var dataSourceId = RenderingContext.CurrentOrNull.Rendering.DataSource;
             var item = Sitecore.Context.Database.GetItem(dataSourceId);
 
-            var twitterWidget = new TwitterWidget()
+            var team = new Team()
             {
-                Title = new HtmlString(FieldRenderer.Render(item, "Title")),
                 HashTag = item.Fields["HashTag"].Value
             };
 
-            return twitterWidget;
+            return team;
         }
     }
 }

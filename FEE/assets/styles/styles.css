@@ -2571,6 +2571,66 @@ twitter-widget.hidden-tweet{
   background-color: #777; 
 }
 
+.suscribe .message.success{
+  padding: 15px 0;
+  color: #5cb85c;
+}
+
+.suscribe .message.error{
+  padding: 15px 0;
+  color: #d23d32;
+}
+
+#map { height: 600px; }
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  max-height: 60vh;
+}
+
+.team {
+  width: calc(50% - 20px);
+  border: solid 1px #777;
+  margin: 10px;
+  display: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.team.active {
+  display: block;
+}
+
+.team .team-title {
+  background-color: #d23d32;
+  text-align: center;
+  color: #fff;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.team .team-country {
+  color: #777;
+  font-weight: 600px;
+  padding: 0 5px;
+}
+
+.team .team-mate {
+  padding: 0 35px 0 5px;
+  position: relative;
+}
+
+.team .team-mate .social {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.team .team-mate .social a {
+  display: inline-block;
+}
+
 @media only screen and (max-width: 769px) {
   #primary-nav {
   position: relative;
@@ -2591,5 +2651,16 @@ twitter-widget.hidden-tweet{
     padding: 30px 0;
     display: block;
     min-height: 380px;
+  }
+  .teams {
+    overflow: scroll;
+    max-height: 70vh;
+  }
+  
+}
+
+@media only screen and (max-width: 500px) {
+  .team {
+    width: 100%;
   }
 }

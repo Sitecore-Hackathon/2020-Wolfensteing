@@ -1,11 +1,11 @@
-﻿@model HackatonWeb.Feature.MailingList.Models.MailingList
+﻿@model HackatonWeb.Feature.MailingList.Models.Subscribe
 
 <div class="col-md-6">
     <div class="suscribe">
         <div>
             <h3>@Model.Title</h3>
 
-            <form action="">
+            <form action="@Model.SubmitUrl">
                 <input type="text" aria-label="@Model.LabelInputArial" placeholder="@Model.LabelInputPlaceHolder">
                 <input type="submit" value="@Model.LabelButtonSubscribe"></button>
             </form>
