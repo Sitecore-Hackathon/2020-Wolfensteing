@@ -45,7 +45,7 @@ gulp.task("Build-Solution", function () {
 
 gulp.task("Publish-Assemblies", function () {
     var root = "./";
-    var binFiles = root + "/src/**/**/**/bin/HackathonWeb.{Feature,Foundation,Website}*.{dll,pdb}";
+    var binFiles = root + "/src/**/**/**/bin/HackatonWeb.{Feature,Foundation,Website}.*.{dll,pdb}";
     var destination = config.websiteRoot + "/bin/";
     return gulp.src(binFiles, { base: root })
         .pipe(rename({ dirname: "" }))
