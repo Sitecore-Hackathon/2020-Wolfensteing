@@ -1,5 +1,6 @@
 ﻿using HackatonWeb.Feature.Hero.Models;
 using HackatonWeb.Foundation.Util;
+using Sitecore.Data.Fields;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 using System.Web;
@@ -28,8 +29,8 @@ namespace HackatonWeb.Feature.Hero.Controllers
                 LinkJoin = new HtmlString(FieldRenderer.Render(item, "LinkJoin")),
                 BackgroundImage = LinkUtil.GetUrlFromLinkField(item.Fields["BackgroundImage"]),
                 VideoUrl = LinkUtil.GetUrlFromLinkField(item.Fields["VideoUrl"]),
+                MainEventDate = ((DateField)item.Fields["MainEventDate"]).DateTime.ToString(),
                 LabelDaysLeft = new HtmlString(FieldRenderer.Render(item, "LabelDaysLeft")),
-                MainEventDate = new HtmlString(FieldRenderer.Render(item, "MainEventDate"))
             };
 
             return heroContent;

@@ -20,7 +20,8 @@ namespace HackatonWeb.Feature.Twitter.Controllers
 
             var twitterWidget = new TwitterWidget()
             {
-                Title = new HtmlString(FieldRenderer.Render(item, "Title"))
+                Title = new HtmlString(FieldRenderer.Render(item, "Title")),
+                HashTag = item.Fields["HashTag"].Value
             };
 
             return twitterWidget;
