@@ -7,7 +7,7 @@ module.exports = function () {
         solutionName: "Hackathon.Boilerplate",
         buildConfiguration: "Debug",
         buildPlatform: "Any CPU",
-        buildToolsVersion: 17.0, //change to 17.0 for VS2019 support
+        buildToolsVersion: 15.0, //change to 17.0 for VS2019 support
         publishPlatform: "AnyCpu",
         runCleanBuilds: false
     };
