@@ -65,9 +65,10 @@
             </div>
         </div>
 
+        @Html.Sitecore().Placeholder("mapContent")
+
         <h3>Faqs</h3>
         <div id="accordion">
-
             @foreach (var faq in Model.FAQs)
             {
                 <div class="card">
@@ -86,40 +87,6 @@
                     </div>
                 </div>
             }
-        </div>
-    </div>
-</section>
-
-
-
-<section id="pre-footer">
-    <div class="container">
-
-        <div class="row">
-
-
-            <div class="col-md-6">
-                <div class="tweets">
-                    <h3>Hackathon Tweets</h3>
-                    <div id="loader"></div>
-                    <div id="tweets" data-hashtag="#SCHackathon"></div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="suscribe">
-                    <div>
-                        <h3>Suscribe to uor newsletter</h3>
-
-                        <form action="/test">
-                            <input type="text" name="email" aria-label="suscibe email" placeholder="enter your email">
-                            <input type="submit" value="Suscribe"></button>
-                            <div class="message"></div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
