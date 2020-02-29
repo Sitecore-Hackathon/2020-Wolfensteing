@@ -1,62 +1,41 @@
-﻿<section id="content" class="post-content">
-    <div class="hero">
-        <div class="overlay">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="hero-text">
-                            <h1>
-                                Sitecore Hackathon 2020
-                            </h1>
-                            <h2>Feb 2020</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <div class="hero-buttons">
-                                <a href="#">More Information</a>
-                                <a href="#">Join</a>
-                            </div>
+﻿@using Sitecore.Mvc
+
+@Html.Sitecore().Placeholder("heroContent")
+
+<div class="older-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="item-card">
+                    <div class="item-card-image">
+                        <img src="./assets/images/card1.jpg" alt="image description">
+                    </div>
+                    <div class="content">
+                        <a href="#">Sitecore Hackathon 2015 – Jan 2015</a>
+                        <div class="card-date">
+                            26 January, 2015
                         </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <video id="video" class="hero__video" loop muted preload="metadata" autoplay>
-            <source class="video__source" type="video/mp4" data-src="./assets/videos/hero.mp4">
-        </video>
-    </div>
-    <div class="older-events">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="item-card">
-                        <div class="item-card-image">
-                            <img src="./assets/images/card1.jpg" alt="image description">
-                        </div>
-                        <div class="content">
-                            <a href="#">Sitecore Hackathon 2015 – Jan 2015</a>
-                            <div class="card-date">
-                                26 January, 2015
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
+            <div class="col-md-6">
+                <div class="item-card">
+                    <div class="item-card-image">
+                        <img src="./assets/images/card1.jpg" alt="image description">
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="item-card">
-                        <div class="item-card-image">
-                            <img src="./assets/images/card1.jpg" alt="image description">
+                    <div class="content">
+                        <a href="#">Sitecore Hackathon 2015 – Jan 2015</a>
+                        <div class="card-date">
+                            26 January, 2015
                         </div>
-                        <div class="content">
-                            <a href="#">Sitecore Hackathon 2015 – Jan 2015</a>
-                            <div class="card-date">
-                                26 January, 2015
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 </section>

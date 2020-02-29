@@ -124,7 +124,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Views\Index.cshtml">
+    <None Include="Views\HeroContent.cshtml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </None>
   </ItemGroup>

@@ -13,7 +13,7 @@ namespace HackatonWeb.Feature.Hero.Controllers
     {
         public ActionResult Index()
         {
-            return View(CreateModel());
+            return View("~/Views/HeroContent.cshtml",CreateModel());
         }
 
         private static HeroContent CreateModel()
