@@ -17,7 +17,9 @@ namespace HackatonWeb.Feature.Hero.Models
         public string BackgroundImage { get; set; }
 
         public string VideoUrl { get; set; }
-
+        
         public HtmlString MainEventDate { get; set; }
+
+        public HtmlString LabelDaysLeft { get; set; }
     }
 }
