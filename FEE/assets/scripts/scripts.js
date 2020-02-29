@@ -83,10 +83,13 @@ TweetJs.Search(Query, function(data, index) {
         twitterWidget.querySelector('.QuoteTweet').style.display = "none";
       }
       if(index === data.statuses.length -1){
-        console.log('s');
-        console.log(document.querySelectorAll('twitter-widget'));
-        document.querySelectorAll('twitter-widget')[activeTweet].classList.remove("hidden-tweet");
-        passTweet();
+        setTimeout(() => {
+          document.getElementById('loader').classList.add('hidden');
+          document.getElementById('tweets').classList.add('loaded');
+          document.querySelectorAll('twitter-widget')[activeTweet].classList.remove("hidden-tweet");
+          passTweet();
+        }, 1000);
+        
       }
     });
 
