@@ -115,9 +115,6 @@
     <Compile Include="Controllers\HeroContentController.cs" />
     <Compile Include="Models\HeroContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\View1.xaml.cs">
-      <DependentUpon>Index.cshtml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
