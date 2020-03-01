@@ -29,6 +29,13 @@ Once the package is installed, you can go to the content editor to check that al
 
 Basic website usage in video
 
+## Screenshots
+
+Hero with blocks
+![Hero with blocks](images/hero.PNG)
+
+Teams and Tab Content
+![Teams and Tab Content](images/teams.PNG)
 
 ## Video
 
