@@ -2,9 +2,6 @@
 using Sitecore.Data.Fields;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -29,7 +26,7 @@ namespace HackatonWeb.WebSite.Controllers
             };
 
             MultilistField judgesListInfo = page.Fields["Judges List"];
-            
+
             foreach (var judge in judgesListInfo.GetItems())
             {
                 LinkField twitterLink = judge.Fields["Twitter Profile Link"];

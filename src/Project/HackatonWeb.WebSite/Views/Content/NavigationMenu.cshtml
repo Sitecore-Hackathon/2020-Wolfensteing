@@ -6,22 +6,22 @@
     <ul id="primary-nav-list" class="l_tinynav1">
         @foreach (var item in Model)
         {
-            <li id="@item.MenuId"
-                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-135 current_page_item menu-item-159">
-                @item.MenuLink
-                @if (item.SubMenus.Count > 0)
+        <li id="@item.MenuId"
+            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-135 current_page_item menu-item-159">
+            @item.MenuLink
+            @if (item.SubMenus.Count > 0)
                 {
-                <ul class="sub-menu">
-                    @foreach (var subMenu in item.SubMenus)
+            <ul class="sub-menu">
+                @foreach (var subMenu in item.SubMenus)
                     {
-                        <li id="@subMenu.MenuId"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1094">
-                            @subMenu.MenuLink
-                        </li>
+                <li id="@subMenu.MenuId"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1094">
+                    @subMenu.MenuLink
+                </li>
                     }
-                </ul>
+            </ul>
                 }
-            </li>
+        </li>
         }
     </ul>
 </nav>

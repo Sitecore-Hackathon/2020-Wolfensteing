@@ -1,5 +1,4 @@
-﻿
-using HackatonWeb.Feature.Map.Models;
+﻿using HackatonWeb.Feature.Map.Models;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Web.UI.WebControls;
@@ -49,7 +48,7 @@ namespace HackatonWeb.Feature.Map
 
         public static Country GetCountry(Item item)
         {
-            ReferenceField field = item.Fields["Country"];
+            ReferenceField field = item?.Fields["Country"];
             if (field == null)
             {
                 return new Country();

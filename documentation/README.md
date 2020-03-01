@@ -19,15 +19,17 @@ Only basic installation is required.
 Install this package in order to configure our module.</br>
 -hackathon.wolfenstein.website.zip
 
+More information in file Installation Instructions.docx
+
 ## Configuration
 
 Once the package is installed, you can go to the content editor to check that all items have been configured properly. Publish the site and go to the home page in your browser to see the results.
 
 ## Usage
 
-Basic website usage
+Basic website usage in video
 
 
 ## Video
 
-Here you can find our video https://youtu.be/Yg7cL9gBXyw
+Here you can find our video https://youtu.be/OMEmWHpPonk

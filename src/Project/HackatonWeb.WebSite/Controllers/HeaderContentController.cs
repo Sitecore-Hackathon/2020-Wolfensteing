@@ -23,7 +23,6 @@ namespace HackatonWeb.WebSite.Controllers
                 Description = item.Fields["Description"].Value
             };
 
-
             return View("~/Views/Content/HeaderContent.cshtml", model);
         }
 

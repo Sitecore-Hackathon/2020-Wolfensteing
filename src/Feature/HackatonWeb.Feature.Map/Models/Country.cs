@@ -1,6 +1,4 @@
-﻿using System.Web;
-
-namespace HackatonWeb.Feature.Map.Models
+﻿namespace HackatonWeb.Feature.Map.Models
 {
     public class Country
     {

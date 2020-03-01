@@ -18,7 +18,7 @@ namespace HackatonWeb.Feature.Editor.Controllers
             var item = Sitecore.Context.Database.GetItem(dataSourceId);
 
             var rtfEditor = new Models.RtfEditor()
-            {                
+            {
                 Content = new HtmlString(FieldRenderer.Render(item, "Content")),
             };
 

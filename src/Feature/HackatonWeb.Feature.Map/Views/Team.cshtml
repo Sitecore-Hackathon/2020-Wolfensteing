@@ -5,8 +5,8 @@
         @Model.TeamName
     </div>
     <div class="team-body">
-        <div class="team-country">@Model.Country.CountryName</div>       
-        
+        <div class="team-country">@Model.Country.CountryName</div>
+
         @foreach (var teamMate in Model.TeamMates)
         {
             Html.RenderPartial("~/Views/Mate.cshtml", teamMate);

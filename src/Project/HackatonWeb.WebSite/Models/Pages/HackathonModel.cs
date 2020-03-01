@@ -3,7 +3,7 @@ using System.Web;
 
 namespace HackatonWeb.WebSite.Models.Pages
 {
-    public class HackathonModel 
+    public class HackathonModel
     {
         public string Title { get; set; }
         public HtmlString Description { get; set; }
@@ -26,7 +26,6 @@ namespace HackatonWeb.WebSite.Models.Pages
             Judges = new List<Judge>();
             FAQs = new List<Faq>();
         }
-
     }
 
     public class Judge

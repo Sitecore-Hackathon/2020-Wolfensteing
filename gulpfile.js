@@ -18,6 +18,7 @@ gulp.task("Publish-Custom", function (callback) {
         "Publish-All-Images",
         "Publish-All-Styles",
         "Publish-Assemblies",
+        "Publish-Assemblies-Web",
         callback);
 });
 
@@ -47,6 +48,17 @@ gulp.task("Build-Solution", function () {
 gulp.task("Publish-Assemblies", function () {
     var root = "./";
     var binFiles = root + "/src/**/**/**/bin/HackatonWeb.{Feature,Foundation,Website}.*.{dll,pdb}";
+    var destination = config.websiteRoot + "/bin/";
+    return gulp.src(binFiles, { base: root })
+        .pipe(rename({ dirname: "" }))
+        .pipe(newer(destination))
+        .pipe(debug({ title: "Copying " }))
+        .pipe(gulp.dest(destination));
+});
+
+gulp.task("Publish-Assemblies-Web", function () {
+    var root = "./";
+    var binFiles = root + "/src/**/**/**/bin/HackatonWeb.Website.{dll,pdb}";
     var destination = config.websiteRoot + "/bin/";
     return gulp.src(binFiles, { base: root })
         .pipe(rename({ dirname: "" }))
